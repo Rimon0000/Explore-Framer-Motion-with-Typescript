@@ -6,9 +6,10 @@ import { useRef } from "react";
 //     animate : { rotate: 360}
 // }
 const parent = {
-    hidden : { opacity: 0, scale: 0.9 },
-    visible : { opacity: 1, scale: 1 , 
-        transition : { ease: "easeInOut", duration: 2,}},
+    hidden : { x : 0 , y : 0, opacity: 0},
+    visible : { opacity: 1, x : [0, 300, -300, 0], y : [0, 300, -300, 0], rotate : [0, 300, -300, 0],
+        transition : { ease: "linear", duration: 5, repeat: Infinity, opacity: {duration: 0.5}}},
+
     hover: {scale: 1.1, transition: {duration: 0.5 }},
     tap: {scale: 1.1, boxShadow: "0px 10px 10px #000"},
 }
